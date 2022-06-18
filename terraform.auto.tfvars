@@ -11,10 +11,3 @@ azurerm_settings = {
   client_secret   = "PUT_YOUR_VALUE_HERE"
   tenant_id       = "PUT_YOUR_VALUE_HERE"
 }
-
-azurerm_remote_state = {
-  resource_group_name  = "tfstate"
-  storage_account_name = "tfstate15184"
-  container_name       = "tfstate"
-  key                  = "terraform.tfstate"
-}

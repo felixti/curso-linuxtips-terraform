@@ -11,15 +11,6 @@ variable "azurerm_settings" {
   })
 }
 
-variable "azurerm_remote_state" {
-  type = object({
-    resource_group_name : string
-    storage_account_name : string
-    container_name : string
-    key : string
-  })
-}
-
 variable "vms_count" {
   default = 3
 }

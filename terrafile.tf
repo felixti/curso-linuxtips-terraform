@@ -12,21 +12,11 @@ variable "azurerm_settings" {
   })
 }
 
-variable "azurerm_remote_state" {
-  type = object({
-    resource_group_name : string
-    storage_account_name : string
-    container_name : string
-    key : string
-  })
-}
-
 
 module "servers" {
   source = "./vm"
 
-  image_reference      = var.image_reference
-  azurerm_settings     = var.azurerm_settings
-  azurerm_remote_state = var.azurerm_remote_state
-  vms_count            = 3
+  image_reference  = var.image_reference
+  azurerm_settings = var.azurerm_settings
+  vms_count        = 3
 }
